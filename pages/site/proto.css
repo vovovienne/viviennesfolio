@@ -1,0 +1,576 @@
+* {
+    transform-style: preserve-3d;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3c3c3c;
+    perspective: 1000px;
+	transition: 0.5s all ease;
+	transform: translate3d(0px, 0px, 400px);
+}
+
+.scene, .object, .face {
+    position: absolute;
+	
+	--rx: 0deg; --ry: 0deg; --rz: 0deg; --tx: 0px; --ty: 0px; --tz: 0px;
+	transform: rotateX( var(--rx) ) rotateY( var(--ry) ) rotateZ( var(--rz) )translate3d( var(--tx), var(--ty), var(--tz) );
+}
+
+.shadow{
+    height: 70%;
+    width: 66%;
+    position: absolute;
+    box-shadow: inset 0 0 1006px #000000;
+    pointer-events: none;
+    transform: translate3d(0px, 0px, 434px);
+	pointer-events: none; 
+	transition: 0.5s all ease;
+}
+
+.brighten {
+	box-shadow: inset 0 0 10px #000000;
+	transition: 0.5s all ease;
+}
+
+.brighten2 {
+	background-color: #dedbd0;
+	transition: 0.5s all ease;
+}
+
+.scene {
+    width: 800px;
+    height: 400px;
+/*    transform: rotateX(-15deg) rotateY(-30deg);*/
+	--rx: -15deg; --ry: 0deg;
+	pointer-events: none; 
+}
+
+.floor {
+	--rx: 90deg; 
+	width: 821px;
+	height: 600px;
+	background-color: #ffffff;
+	transform: rotateX( 90deg );
+}
+
+.floorFront {
+    width: 821px;
+    height: 62px;
+    position: absolute;
+    transform: translate3d(0px, -304px, 299px);
+}
+
+.wallback { 
+	--rx: 90deg; 
+	width: 821px;
+	height: 400px;
+	background-color: #e6e6e6;
+	position: absolute;
+	transform: translate3d(0px, -704px, -299px);
+	pointer-events: none;
+}
+
+.wallright { 
+	--rx: 90deg; 
+	width: 600px;
+	height: 400px;
+	background-color: #e6e6e6;
+	position: absolute;
+	transform: rotateY( 90deg ) translate3d(0px, -704px, 520px);
+	pointer-events: none;
+}
+
+.wallleft { 
+	--rx: 90deg; 
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	transform: rotateY( 90deg ) translate3d(0px, -704px, -299px);
+	pointer-events: none;
+}
+
+.curtains{ 
+	--rx: 90deg; 
+    width: 300px;
+    height: 290px;
+	position: absolute;
+	transform: rotateY( 90deg ) translate3d(0px, -611px, -149px);
+}
+
+#points {
+	font-family: 'Source Sans Pro', sans-serif;
+    color: #842E29;
+    font-size: 36px;
+    position: absolute;
+    transform: translate3d(491px, -296px, 301px);
+}
+
+span {
+	visibility: hidden;
+}
+
+.legfront{
+	--rx: 90deg; 
+	width: 20px;
+	height: 150px;
+	background-color: #d1d1d1;
+	position: absolute;
+	transform:translate3d(0px, -450px, 10px);
+}
+
+.legleft{
+	--rx: 90deg; 
+	width: 20px;
+	height: 150px;
+	background-color: #d1d1d1;
+	position: absolute;
+	transform:rotateY( 90deg ) translate3d(0px, -450px, -10px);
+}
+
+.modal{
+	position: absolute;
+    width: 307px;
+    height: 195px;
+    transform: translate3d(11%, -27px, 384px);
+    background-color: #932222;
+    box-shadow: inset 0 0 50px #652525;
+    display: block;
+    border-radius: 10px;
+    z-index: 1;
+	
+}
+
+#instructions {
+	font-family: 'Fondamento', cursive;
+	color: #efefef;
+	margin-top: 6%;
+	text-align: center;	
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#go {
+	left: 50%;
+	margin-left: 33%;
+	width: 100px;
+	font-size: 20px;
+	background-color: #6d1f1f;
+	border: none;
+	font-family: 'Fondamento', cursive;
+	color: #efefef;
+	border-radius: 5px;
+}
+
+.chickentime{
+	position: absolute;
+	width: 275px;
+    height: 158px;
+    transform: translate3d(11%, -27px, 384px);
+    background-color: #932222;
+    box-shadow: inset 0 0 50px #652525;
+    display: block;
+    border-radius: 10px;
+    z-index: 1;
+	visibility: hidden;
+}
+
+#thankyou{
+	font-family: 'Fondamento', cursive;
+	color: #efefef;
+	text-align: center;
+	margin-top: -7%;
+}
+
+#close{
+	font-family: 'Source Sans Pro', sans-serif;
+	cursor: pointer;
+	font-size: 40px;
+	text-align:right;
+	color: #4e1212;
+	margin-left: 80%;
+	margin-top: -3%;
+	width:45px;
+}
+
+h2:hover {
+	text-shadow:0 0 3px #521313;
+}
+
+.hide2 {
+	display: none;
+}
+
+button:hover{
+	cursor: pointer;
+	box-shadow: 0 0 10px #581313;
+}
+
+.table {
+	transform:translate3d(120px, 0px, 200px);
+}
+
+.tableleg1 {
+	transform:translate3d(120px, 0px, 200px);
+}
+
+.tableleg2 {
+	transform:translate3d(420px, 0px, 200px);
+}
+
+.tableleg3 {
+	transform:translate3d(120px, 0px, 0px);
+}
+
+.tableleg4 {
+	transform:translate3d(420px, 0px, 0px);
+}
+
+.tabletopface{
+	--rx: 90deg; 
+	width: 360px;
+	height: 250px;
+	background-color: #afafaf;
+	position: absolute;
+	transform:rotateX( 90deg ) translate3d(101px, 97px, 585px);
+	pointer-events: none;
+}
+
+.tablefrontface{
+	--rx: 90deg; 
+	width: 360px;
+	height: 20px;
+	background-color: #afafaf;
+	position: absolute;
+	transform:translate3d(101px, -460px, 222px);
+}
+
+.tableleftface{
+	--rx: 90deg; 
+	width: 250px;
+	height: 20px;
+	background-color: #afafaf;
+	position: absolute;
+	transform:rotateY(90deg) translate3d(-97px, -460px, -23px);
+}
+
+.table {
+	transform: rotateY(52deg) translate3d(-73px, -5px, -179px);
+}
+
+.chimneyfront{
+	--rx: 90deg; 
+	width: 120px;
+	height: 250px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform: translate3d(348px, -700px, -216px);
+}
+
+.chimneyleft{
+	--rx: 90deg; 
+	width: 82px;
+	height: 250px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform: rotateY(90deg) translate3d(257px, -700px, 309px);
+}
+
+.chimneyright{
+	--rx: 90deg; 
+	width: 82px;
+	height: 250px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform: rotateY(90deg) translate3d(257px, -700px, 425px);
+}
+
+.firepfront {
+	--rx: 90deg; 
+	width: 250px;
+	height: 150px;
+	position: absolute;
+	transform:translate3d(280px, -450px, -200px);
+}
+
+.firepleft {
+	--rx: 90deg; 
+	width: 100px;
+	height: 150px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform:rotateY( 90deg ) translate3d(249px, -450px, 230px);
+}
+
+.fireplace{
+	transform: translate3d(19px, 0px, 0px);
+}
+
+.firepright {
+	--rx: 90deg; 
+	width: 100px;
+	height: 150px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform:rotateY( 90deg ) translate3d(249px, -450px, 480px);
+}
+
+.fireptop {
+	--rx: 90deg; 
+	width: 250px;
+	height: 100px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform:rotateX( 90deg ) translate3d(280px, -249px, 499px);
+}
+
+.fire {
+    --rx: 90deg;
+    width: 165px;
+    height: 180px;
+    position: absolute;
+    transform: translate3d(341px, -437px, -247px);
+}
+
+.cpright {
+	--rx: 90deg; 
+	width: 100px;
+	height: 150px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform:rotateY( 90deg ) translate3d(249px, -450px, 480px);
+}
+
+.cptop {
+	--rx: 90deg; 
+	width: 250px;
+	height: 100px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform:rotateX( 90deg ) translate3d(280px, -249px, 499px);
+}
+
+.cpfront {
+	--rx: 90deg; 
+	width: 250px;
+	height: 150px;
+	background-color: #b7b7b7;
+	position: absolute;
+	transform:translate3d(280px, -449px, -199px);
+}
+
+.cupboard{
+	transform:rotateY( -90deg ) translate3d(164px, -4px, -121px);
+}
+
+.tree1 {
+	--rx: 90deg; 
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	transform:rotateY(45deg) translate3d(567px, -600px, 294px);
+	
+}
+
+.tree2 {
+	--rx: 90deg; 
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	transform:rotateY(-45deg) translate3d(288px, -600px, -571px);
+	
+}
+
+.painting{
+	--rx: 90deg; 
+	width: 140px;
+    height: 175px;
+	position: absolute;
+	transform:translate3d(96px, -664px, -299px);
+	box-shadow: 0 9px 6px #3c1717;
+}
+
+.painting2{
+	--rx: 90deg; 
+	width: 140px;
+    height: 175px;
+	position: absolute;
+	transform: translate3d(96px, -664px, -299px);
+	visibility: hidden;
+	box-shadow: 0 9px 6px #3c1717;
+}
+
+.visible {
+	visibility: visible !important;
+}
+
+.hide{
+	visibility: hidden !important;
+}
+
+.chickenbox{
+	width: 158px;
+    height: 91px;
+	transform: translate3d(175px, -547px, 31px);
+	position: absolute;
+}
+.chicken {
+    width: 158px;
+    height: 91px;
+	pointer-events: none;
+}
+
+.chickendrum{
+	width: 158px;
+    height: 91px;
+	transform: rotateY( var(--ry) );
+}
+.chickenbox2{
+	width: 158px;
+    height: 91px;
+	transform: translate3d(175px, -547px, 31px);
+	position: absolute;
+	visibility: hidden;
+}
+
+.chickenplus{
+	pointer-events: auto !important;
+	cursor: pointer !important;
+}
+
+.steamdiv{
+	width: 73px;
+    height: 110px;
+    position: absolute;
+    transform: translate3d(209px, -594px, 19px);
+    opacity: 50%;
+}
+.steam{
+	width: 73px;
+    height: 110px;
+	visibility: hidden;
+}
+
+.jarbox{
+	width: 106px;
+    height: 131px;
+	position: absolute;
+	transform: translate3d(89px, -556px, 222px);
+}
+.jar {
+	width: 106px;
+    height: 131px;
+}
+.jamdiv{
+    width: 31px;
+    height: 40px;
+	position: absolute;
+	transform: translate3d(94px, -505px, 141px);
+}
+.jam {
+    width: 31px;
+    height: 40px;
+	transform: rotateY( var(--ry) ) 
+}
+
+.snowbox{
+	width: 72px;
+    height: 80px;
+    position: absolute;
+    transform: translate3d(722px, -520px, 248px);
+}
+.snowglobe{
+	width: 72px;
+    height: 80px;
+}
+
+.mistletoe { 
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: translate3d(376px, -614px, -216px);
+}
+
+.light{
+	width: 30px;
+    height: 47px;
+	position: absolute;
+}
+
+@keyframes glow {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 40%;
+  }
+}
+
+.light.one{
+	transform: translate3d(224px, -581px, 217px);
+	animation: glow 1s infinite alternate;
+}
+
+.light.two{
+	transform: translate3d(550px, -581px, 217px);
+	animation: glow 1.5s infinite alternate;
+}
+
+.light.three{
+	transform: translate3d(86px, -581px, 6px);
+	animation: glow 1s infinite alternate;
+}
+
+.light.four{
+	transform: translate3d(384px, -581px, -168px);
+	animation: glow 1.2s infinite alternate;
+}
+
+.light.five{
+	transform: translate3d(687px, -581px, 6px);
+	animation: glow 0.9s infinite alternate;
+}
+
+.lightup {
+	filter: hue-rotate(-1.858rad);
+}
+
+.clickon {
+	pointer-events: auto !important;
+}
+
+.present {
+	width: 80px;
+    height: 100px;
+	position: absolute;
+	opacity: 60%;
+	cursor: pointer;
+	pointer-events: none; 
+	display: block;
+}
+
+.present.one {
+	transform: rotateX(90deg) translate3d(506px, 73px, 354px);
+}
+
+.present.two {
+	transform: rotateY(90deg) translate3d(116px, -429px,779px);
+}
+
+.present.three {
+	transform: rotateX( 90deg ) translate3d(185px, 147px, 515px);
+}
+
+.present.four {
+	transform: translate3d(14px, -474px, -299px);
+}
+
+.present.five {
+	transform: translate3d(487px, -569px, -299px);
+	
+}

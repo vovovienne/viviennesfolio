@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMAS</title>
+    <link rel="stylesheet" href="proto.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,700;1,900&display=swap" rel="stylesheet">
+</head>
+	
+
+<body>
+	<audio loop src="sounds/bgm.mp3"></audio>
+	<audio loop src="sounds/fire.wav"></audio>
+	<audio loop src="sounds/cryingsfx.wav"></audio>
+	<audio src="sounds/chime.wav"></audio>
+	
+
+	 <div class="modal">
+			<p id = "instructions"> Help cheer up the crying painting to set a better mood for the Christmas dinner. <br> (Hint: Try finding the Christmas presents!) </p>
+			
+			<button id = "go" onclick="hideModal()"> Go! </button>
+ 		</div>
+			
+	 <div class="chickentime">
+		 <h2 id = "close" onclick="hideModal2()"> x </h2>
+		 <p id = "thankyou"> Thanks for your help! <br> Help yourself to some chicken!</p>
+ 	</div>
+			
+	<div class = "shadow"></div>
+    
+	<div class="scene">
+
+		
+       	<img class = "floor" src="images/floor.png">
+		<img class = "floorFront" src="images/floorfront.png">
+		<img class = "wallback" src="images/wallpaper.png">
+		<img class = "wallleft" src="images/wallwindow.png">
+		<img class = "wallright" src="images/wallside1.png">
+		
+		<span id = "points"> </span>
+		
+		<img class = "curtains" src="images/curtain.png">
+		
+		<div class = "table">
+			<div class = "tableleg1">
+				<img class = "legfront" src="images/tableleg1.png">
+				<img class = "legleft" src="images/tableleg1.png">
+			</div>
+			
+			<div class = "tableleg2">
+				<img class = "legfront" src="images/tableleg1.png">
+				<img class = "legleft" src="images/tableleg1.png">
+			</div>
+			
+			<div class = "tableleg3">
+				<img class = "legfront" src="images/tableleg1.png">
+				<img class = "legleft" src="images/tableleg1.png">
+			</div>
+			
+			<div class = "tableleg4">
+				<img class = "legfront" src="images/tableleg1.png">
+				<img class = "legleft" src="images/tableleg1.png">
+			</div>
+			
+			<div class = "tabletop">
+				<img class = "tabletopface" src="images/tabletop.png">
+				<img class = "tablefrontface" src="images/tableside1.png">
+				<img class = "tableleftface" src="images/tableside.png">
+			</div>
+		</div>
+		
+		<div class = "fireplace">
+			<img class = "firepfront" src="images/firpfront.png">
+			<img class = "firepleft" src="images/firepside.png">
+			<img class = "firepright" src="images/firepside.png">
+			<img class = "fireptop" src="images/fireptop.png">
+			<img class = "chimneyfront" src="images/chimfront.png">
+			<img class = "chimneyleft" src="images/chimside.png">
+			<img class = "chimneyright" src="images/chimside.png">
+			
+		</div>
+		
+		<img loop class = "fire" src="images/fiya.gif">
+		
+		<div class = "cupboard">
+			<img class = "cpfront" src="images/wadrobefront.png">
+			<img class = "cpright" src="images/wadrobeside.png">
+			<img class = "cptop" src="images/wadrobetop.png">
+		
+		</div>
+		
+		<div class = "tree">
+			<img class = "tree1" src="images/tree.png">
+			<img class = "tree2" src="images/tree.png">
+		</div>
+		
+		<div class = "chickenbox">
+			<img class = "chicken face" onclick="newChicken()" src="images/chicken.png">
+		</div>
+		<div class = "chickenbox2">
+			<img class = "chickendrum" src="images/chicken1.png">
+		</div>
+		<img loop class = "painting" src="images/f2.gif">
+		<img class = "painting2" src="images/end.gif">
+		<div class = "snowbox">
+			<img loop class = "snowglobe face" src="images/globe.gif">
+		</div>
+		<div class = "jarbox">
+			<img loop class = "jar face" src="images/yyoo.gif">
+		</div>
+		<div class = "jamdiv">
+			<img class = "jam" src = "images/jam.png">
+		</div>
+		<div class = "steamdiv">
+			<img loop class = "steam" src="images/steam.gif">
+		</div>
+		<img class = "mistletoe" src = "images/mistletoe.png">
+		
+		
+		<img class = "light one" src="images/light.png">
+		<img class = "light two" src="images/light.png">
+		<img class = "light three" src="images/light.png">
+		<img class = "light four" src="images/light.png">
+		<img class = "light five" src="images/light.png">
+
+		<img class = "present one" onclick="addPoint1()" src = "images/p.png">
+		<img class = "present two" onclick="addPoint2()" src = "images/p.png">
+		<img class = "present three" onclick="addPoint3()" src = "images/p.png">
+		<img class = "present four" onclick="addPoint4()" src = "images/p.png">
+		<img class = "present five" onclick="addPoint5()" src = "images/p.png">
+	
+	
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="proto.js"></script>
+</body>
+
+</html>

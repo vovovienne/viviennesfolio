@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px 20px 10px;
+    height: auto;
+    width: 95vw;
+    /* add font later*/
+    background-color: #2a2b2a;
+}
+
+p {
+    font-family:"Reddit Mono", monospace;
+    font-weight: 100;
+    font-size: 13px;
+    color: #f6f6f6;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    font-family:"Reddit Mono", monospace;
+    color: #f6f6f6;
+    font-weight: 100;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px;
+}
+
+iframe {
+    position: absolute;
+    width: 1236px;
+    height: 714px;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    top: -27vh;
+    left: 16vw;
+}
+
+.samplesite {
+    visibility: hidden;
+}
+button {
+    background-color: #e2e2e2;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 16px;
+	border: none;
+	padding: 8px;
+	cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 500;
+    font-size: 13px;
+    z-index: 5;
+}
+
+
+#headertext{
+    font-size: 20px;
+}
+.menulink{
+    margin-bottom: -7px;
+    display: block;
+    text-align: right;
+}
+
+.nav{
+    position: fixed;
+    top: 0px;
+    right: 1vw;
+    width: min-content;
+    height: auto;
+    z-index: 100;
+}
+
+#header {
+    position: relative;
+    display: block;
+    align-items: center; 
+	justify-content: center;
+    width: 100%;
+    min-height: 5vh;
+}
+
+#menuicon{
+    background-color: transparent; 
+    width: 48px;
+    margin-left: 75px;
+    cursor: pointer;
+    mix-blend-mode: screen;
+}
+
+#navbarcontents{
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.445);
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+.pagesection{
+    position: relative;
+    display: block;
+    align-items: center; 
+	justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.othersection{
+    position: relative;
+    display: block;
+    align-items: center; 
+	justify-content: center;
+    width: 100%;
+    height: min-content;
+}
+
+#homepagetext{
+    position: relative;
+    display: block;
+    top: 35vh;
+}
+
+#homepageheading{
+    font-size: 70px;
+}
+
+#othersectionillust{
+    height: 62vw;
+
+}
+
+#illust {
+ margin-top: 2vw;
+}
+
+.otherimgs{
+    width: 33%;
+}
+
+h1 {
+    font-size: 120px;
+	color: #e2e2e2;
+    font-family: "Passion One", sans-serif;
+    font-weight: 400;
+    cursor: default;
+}
+
+h2 {
+    font-size:40px;
+	color: #e2e2e2;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    cursor: default;
+}
+
+.samplesite{
+    position: absolute;
+    right: 8vw;
+    top:0;
+}
+
+.buttonclicked {
+    opacity: 50%;
+}
+.websitelinksvg{
+    cursor: pointer;
+    width: 40px;
+}
+
+.arrowweblink {
+    position: absolute;
+    transform: rotate(-40deg);
+    width: 28px;
+}
+#uisection {
+    position: relative;
+    display: block;
+
+    width: fit-content;
+}
+
+#weblinksection {
+    position: relative;
+    width: 95vw;
+    height: 60vh;
+}
+
+#weblinkbuttons {
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: 9vw;
+    padding-top: 8vh;
+}
+
+.animshowcase{
+    display: inline-block;
+    width: 33%;
+}
+.vid3dshowcase{
+    display: inline-block;
+    width: 49%;
+}
+
+.illustrations{
+    width:20%;
+}
+
+#anim1 {
+    width: 25vw;
+}
+
+  /* Phone 
+@media only screen and (max-width: 680px) {
+    #prevpagebtn, #nextpagebtn {
+      display: none;
+    }
+
+    body {
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+    
+
+        background-color: #2a2b2a;
+    }
+
+    .flipbook {
+
+        position: relative;
+        height: 505.2px;
+        width: 357px;
+        transition: transform 0.5s;
+        align-content: center;
+        vertical-align: middle;
+    }
+
+    .pages {
+        position: relative;
+        width: 100%;
+        height: 100%;    
+        top: 0;
+        left: 0;
+        align-content: center;
+        vertical-align: middle;
+        margin-bottom: 113%;
+    }
+
+    .frontpage, .backpage{
+        background-color: white;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 1px;
+        top: 0;
+        left: 0;
+    }
+
+    .backcontent{
+        transform: rotateY(0deg);
+    }
+
+    .frontpage {
+        backface-visibility: hidden;
+        border-left:none;
+    }
+
+    
+    #backhomebutton {
+        position: absolute;
+        right: 0;
+        bottom:-100%;
+        width: 15%;
+}
+
+
+
+  }
+
+
+
+  /* iPad 
+  @media only screen and (max-width: 1025px) and (orientation: portrait) {
+
+
+    
+  }
+
+
+  */
