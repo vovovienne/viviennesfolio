@@ -3,10 +3,31 @@ function openMenu() {
   }
 
 
-const navbar = document.getElementById("navbar");
+function opensamplesite(iframeid) {
+  const alliframes = document.getElementsByTagName("iframe");
+  const iframe = document.getElementById(iframeid);
 
+  for (const ifr of alliframes) {
+    if (ifr.id != iframeid) {
+      ifr.classList.remove("visible");
+    }
+  }
 
+  iframe.classList.toggle("visible");
 
+}
+
+function movetextup(textid) {
+  const text = document.getElementById(textid);
+
+  text.classList.add(".splashtextraise")
+}
+
+function reverttext(textid) {
+  const text = document.getElementById(textid);
+
+  text.classList.remove(".splashtextraise")
+}
 
 /*
 window.addEventListener("scroll", (event) => {

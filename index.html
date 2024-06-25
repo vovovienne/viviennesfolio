@@ -33,10 +33,36 @@
     </div>
 
     <div id="homepage" class="pagesection">
-     
-      <div id= "homepagetext">  
-        <h1 id = "homepageheading"> Hello. </h1>
-        <p> Web Design. Animation. Digital Design. </p> 
+      
+
+      <div id = "introtext">
+        <img onmouseover = "movetextup(introtexthello1)" onmouseout = "reverttext(introtexthello1)" id = "introtexthello1" class ="introtextall" src = "icons/splashtext/hello_h.png">
+        <img id = "introtexthello2" class ="introtextall" src = "icons/splashtext/hello_e.png">
+        <img id = "introtexthello3" class ="introtextall" src = "icons/splashtext/hello_l1.png">
+        <img id = "introtexthello4" class ="introtextall" src = "icons/splashtext/hello_l2.png">
+        <img id = "introtexthello5" class ="introtextall" src = "icons/splashtext/hello_o.png">
+        <img id = "introtextwelcome1" class ="introtextall" src = "icons/splashtext/welcome_w.png">
+        <img id = "introtextwelcome2" class ="introtextall" src = "icons/splashtext/welcome_e1.png">
+        <img id = "introtextwelcome3" class ="introtextall" src = "icons/splashtext/welcome_l.png">
+        <img id = "introtextwelcome4" class ="introtextall" src = "icons/splashtext/welcome_c.png">
+        <img id = "introtextwelcome5" class ="introtextall" src = "icons/splashtext/welcome_o.png">
+        <img id = "introtextwelcome6" class ="introtextall" src = "icons/splashtext/welcome_m.png">
+        <img id = "introtextwelcome7" class ="introtextall" src = "icons/splashtext/welcome_e.png">
+        <img id = "introtextto1" class ="introtextall" src = "icons/splashtext/to_t.png">
+        <img id = "introtextto2" class ="introtextall" src = "icons/splashtext/to_o.png">
+        <img id = "introtextmy1" class ="introtextall" src = "icons/splashtext/my_m.png">
+        <img id = "introtextmy2" class ="introtextall" src = "icons/splashtext/my_y.png">
+        <img id = "introtextfolio1" class ="introtextall" src = "icons/splashtext/folio_f.png">
+        <img id = "introtextfolio2" class ="introtextall" src = "icons/splashtext/folio_o.png">
+        <img id = "introtextfolio3" class ="introtextall" src = "icons/splashtext/folio_l.png">
+        <img id = "introtextfolio4" class ="introtextall" src = "icons/splashtext/folio_i.png">
+        <img id = "introtextfolio5" class ="introtextall" src = "icons/splashtext/folio_o2.png">
+      </div>
+
+      <div id ="subheadingcont">
+        <p class = "introsubheading"> Web Design.</p>
+        <p class = "introsubheading">  Animation.</p> 
+        <p class = "introsubheading"> Digital Illust + Design. </p> 
       </div>
 
     </div>
@@ -52,9 +78,9 @@
         <div id="weblinksection">
 
           <div id = "weblinkbuttons"> 
-            <button href="pages/vivienne_assignment1/page.html" target=”_blank” id = "museumwebsbutton"> Online Museum </button> <a class = "websitelinksvg" href="pages/vivienne_assignment1/page.html"  target=”_blank”>  <img class = "arrowweblink" src = "icons/iconmonstr-arrow-right-lined-64.png"> </a>
+            <button onclick="opensamplesite('samplesite1')" href="pages/vivienne_assignment1/page.html" target=”_blank” id = "museumwebsbutton"> Online Museum </button> <a class = "websitelinksvg" href="pages/vivienne_assignment1/page.html"  target=”_blank”>  <img class = "arrowweblink" src = "icons/iconmonstr-arrow-right-lined-64.png"> </a>
             <p>  &#8594 HTML + CSS, JavaScript, JQuery <br/>  &#8594 Horizontal Scrolling Site  </p>
-            <button href="pages/site/proto.html" target=”_blank” id = "xmaswebbutton"> Holiday-Themed Web Game </button> <a class = "websitelinksvg" href="pages/site/proto.html" target=”_blank”>  <img class = "arrowweblink" src = "icons/iconmonstr-arrow-right-lined-64.png"> </a>
+            <button onclick="opensamplesite('samplesite2')"href="pages/site/proto.html" target=”_blank” id = "xmaswebbutton"> Holiday-Themed Web Game </button> <a class = "websitelinksvg" href="pages/site/proto.html" target=”_blank”>  <img class = "arrowweblink" src = "icons/iconmonstr-arrow-right-lined-64.png"> </a>
             <p>  &#8594 HTML + CSS, JavaScript, JQuery <br/>  &#8594 3d Planes + Rotation </p>
             <button> Art Portfolio (Coming Soon)</button> 
             <p>  &#8594 React, TypeScript <br/>  &#8594 Responsive Design </p>
@@ -136,8 +162,21 @@
           &#8618 Click here to view Magazine </a>
           <br/>
 
-        <img id = "illust" class = "illustrations" src="content/illustrations/image.png">
-        <img id = "illust" class = "illustrations" src="content/illustrations/previewzine.png">
+          
+          <a href = "https://drive.google.com/drive/u/3/folders/13IxkqHqr2XqkUUAH7fJuivTV7MjHlETJ">
+            <div id = "zine1cont" class = "illustrationcont">
+              <img id = "zineillust1" class = "illustrations" src="content/illustrations/image.png">
+              <p id = "zine1text"> Click to view Zine. </p>
+            </div>
+          </a> 
+       
+        <a href = "https://oursummersongzine.carrd.co/" target=”_blank”>
+            <div id = "zine2cont" class = "illustrationcont">
+              <img id = "zineillust2" class = "illustrations" src="content/illustrations/summerzine.jpg">
+              <p id = "zine2text"> Click to view Zine. </p>
+            </div>
+        </a>
+          
         <p> Digital Illustration (2). Zine Contributions.</p>
       </div><br/>
 
