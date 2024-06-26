@@ -40,6 +40,7 @@ iframe {
     transform: scale(0.45);
     top: -27vh;
     left: 9vw;
+    border: none;
 }
 
 
@@ -62,15 +63,16 @@ button {
 #introtext {
     position: relative;
     display: block;
-    pointer-events: none;
+    width: 600px;
+    height: 285px;
+    left: 50%;
+    transform: translate(-50%, 40%);
 }
 
 .introtextall{
     position: absolute;
-    width: 600px;
-    left: 50%;
-    transform: translate(-50%, 40%);
-    transition: 0.3s ease-in-out;
+    max-width: 100%;
+    transition: 0.2s ease-in-out;
 }
 
 .introsubheading:hover {
@@ -184,7 +186,7 @@ button {
 }
 
 .otherimgs{
-    width: 33%;
+    width: 26%;
 }
 
 h1 {
@@ -206,7 +208,6 @@ h2 {
 .samplesite{
     position: absolute;
     right: 8vw;
-    visibility: hidden;
 }
 
 .buttonclicked {
