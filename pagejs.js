@@ -2,7 +2,12 @@ function openMenu() {
     document.getElementById("navbarcontents").classList.toggle("visible");
   }
   
+function playstaranim(starvalid) {
+  const starid = document.getElementById(starvalid);
+  
 
+
+}
 
   function opensamplesite(iframeid, samplesitesrc) {
     const divcont = document.getElementById("samplesitecont");
@@ -68,8 +73,9 @@ function openMenu() {
       })));
   
     const images = Object.keys(imageMasks).map(id => document.getElementById(id));
-    const rect = container.getBoundingClientRect();
+  
     container.addEventListener("mousemove", (e) => {
+      const rect = container.getBoundingClientRect();
       const x = Math.round(e.clientX - rect.left);
       const y = Math.round(e.clientY - rect.top);
       const target = idPixelMap[y * container.clientWidth + x];
